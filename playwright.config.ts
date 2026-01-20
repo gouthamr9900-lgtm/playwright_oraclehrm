@@ -35,6 +35,10 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
+    // ...other options...
+  headless: process.env.CI ? true : false,
+  // ...other options...
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     
     baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
@@ -42,7 +46,6 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'on',
     video: 'retain-on-failure',
-    headless: false,
     navigationTimeout: 100000,
     viewport: { width: 1280, height: 720 },
   },
