@@ -38,7 +38,6 @@ export default defineConfig({
     // ...other options...
   headless: process.env.CI ? true : false,
   // ...other options...
-
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     
     baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
